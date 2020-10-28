@@ -34,13 +34,19 @@ public boolean deposit(double amount){
 }
 
 public boolean withdraw(double amount){
-  if(amount > 0 && amount <= balance){
+  if(amount > 0.0 && amount <= balance){
     balance -= amount;
     return true;
   }
-  else return true;
+  if(amount < 0 || amount > balance){
+  return false;
   }
+  return true;
+}
   public String toString(){
     return String.valueOf(accountID) +"\t"+String.valueOf(balance);
+  }
+  public void setPassword(String newPass){
+    password = newPass;
   }
 }
