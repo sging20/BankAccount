@@ -16,4 +16,13 @@ public int getAccountID(){
   return accountID;
 }
 
+public double getBalance(){
+  return balance;
+}
+
+
+public String getPassword(){
+  return password;
+}
+
 }
