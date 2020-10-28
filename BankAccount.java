@@ -40,5 +40,7 @@ public boolean withdraw(double amount){
   }
   else return true;
   }
-
+  public String toString(){
+    return String.valueOf(accountID) +"\t"+String.valueOf(balance);
+  }
 }
