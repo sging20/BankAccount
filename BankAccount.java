@@ -25,4 +25,10 @@ public String getPassword(){
   return password;
 }
 
+public boolean deposit(double amount){
+  if(amount >= 0.0){
+    balance += amount;
+    return true;
+  }
+  else return false;
 }
