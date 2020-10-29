@@ -44,9 +44,22 @@ public boolean withdraw(double amount){
   return false;
 }
   public String toString(){
-    return String.valueOf(accountID) +"\t"+String.valueOf(balance);
+    return "#" + String.valueOf(accountID) +"\t"+ "$" + String.valueOf(balance);
   }
   public void setPassword(String newPass){
     password = newPass;
   }
+
+  private boolean authenticate(String password){
+  return this.password.equals(password);
+  }
+
+  public boolean transferTo(BankAccount other, double amount, String password){
+  if(authenticate(password) && withdraw(amount) ){
+    return other.deposit(amount)
+    }
+    else return false;
+  }
+
+
 }
